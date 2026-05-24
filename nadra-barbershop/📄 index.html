@@ -1,0 +1,3227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Nadra Barbershop & Spa - Kasarani, Nairobi</title>
+    <meta name="description" 
+          content="Nadra Barbershop & Spa - Premium grooming 
+          and spa services in Kasarani, Nairobi. Located at 
+          Vision Plaza near Shell Petrol Station, off Thika 
+          Road near TRM Mall. Call 0762606079">
+    <meta name="keywords" 
+          content="barbershop kasarani, spa kasarani nairobi,
+          waxing kasarani, massage kasarani, facial kasarani,
+          haircut near TRM, barber thika road, nadra barbershop,
+          pedicure manicure kasarani nairobi">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Lato:wght@300;400;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* ================================
+           ROOT VARIABLES & RESET
+        ================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0a1f44;
+            --navy-dark: #060f22;
+            --navy-mid: #112255;
+            --navy-light: #1a3166;
+            --gold: #FFD700;
+            --gold-dark: #B8860B;
+            --gold-light: #ffe44d;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --grey: #cccccc;
+            --text-muted: rgba(255,255,255,0.65);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: var(--navy-dark);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .gold {
+            color: var(--gold);
+        }
+
+        .section-tag {
+            display: block;
+            text-align: center;
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.6rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .section-line {
+            width: 55px;
+            height: 4px;
+            background: var(--gold);
+            margin: 0 auto 55px;
+            border-radius: 2px;
+        }
+
+        section {
+            padding: 90px 20px;
+        }
+
+        /* BUTTONS */
+        .btn-primary {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy-dark);
+            padding: 15px 38px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 15px 38px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.6);
+            margin-left: 12px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ================================
+           ANNOUNCEMENT BAR
+        ================================ */
+        .announcement-bar {
+            background: var(--gold);
+            color: var(--navy-dark);
+            text-align: center;
+            padding: 11px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .announcement-bar a {
+            color: var(--navy-dark);
+            font-weight: 900;
+            text-decoration: underline;
+        }
+
+        /* ================================
+           NAVIGATION
+        ================================ */
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 22px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        #navbar.scrolled {
+            background: rgba(6, 15, 34, 0.97);
+            padding: 14px 50px;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.4rem;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.88);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-book-btn {
+            background: var(--gold) !important;
+            color: var(--navy-dark) !important;
+            padding: 10px 22px !important;
+            border-radius: 4px;
+            font-weight: 900 !important;
+        }
+
+        .nav-book-btn::after {
+            display: none !important;
+        }
+
+        .nav-book-btn:hover {
+            background: var(--gold-dark) !important;
+            color: var(--white) !important;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Nav */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--navy-dark);
+            z-index: 999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        .mobile-nav.open {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .mobile-nav a:hover {
+            color: var(--gold);
+        }
+
+        .mobile-nav .close-btn {
+            position: absolute;
+            top: 25px;
+            right: 30px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--gold);
+        }
+
+        /* ================================
+           HERO SECTION
+        ================================ */
+        #hero {
+            height: 100vh;
+            min-height: 650px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(6,15,34,0.88) 0%,
+                rgba(10,31,68,0.75) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 820px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 9px 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            border-radius: 2px;
+        }
+
+        .hero-content h1 {
+            font-size: 4.2rem;
+            line-height: 1.1;
+            margin-bottom: 22px;
+            color: var(--white);
+            font-weight: 900;
+        }
+
+        .hero-content h1 span {
+            color: var(--gold);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.82);
+            margin-bottom: 42px;
+            line-height: 1.85;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero-meta {
+            margin-top: 48px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        .hero-meta-item i {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        /* ================================
+           STATS BAR
+        ================================ */
+        .stats-bar {
+            background: var(--navy);
+            border-top: 3px solid var(--gold);
+            padding: 40px 20px;
+        }
+
+        .stats-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.4rem;
+            color: var(--gold);
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ================================
+           ABOUT SECTION
+        ================================ */
+        #about {
+            background: var(--navy);
+        }
+
+        .about-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-img-wrap {
+            position: relative;
+        }
+
+        .about-img-wrap img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -25px;
+            right: -25px;
+            background: var(--gold);
+            color: var(--navy-dark);
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 8px 25px rgba(255,215,0,0.35);
+        }
+
+        .about-badge .big {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .about-badge .small {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .about-text h2 {
+            font-size: 2.4rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            line-height: 1.95;
+            margin-bottom: 18px;
+            font-size: 0.98rem;
+        }
+
+        .about-checks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+            margin: 28px 0 35px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,0.82);
+            font-size: 0.92rem;
+        }
+
+        .check-item i {
+            color: var(--gold);
+            font-size: 0.95rem;
+            flex-shrink: 0;
+        }
+
+        /* ================================
+           SERVICES SECTION
+        ================================ */
+        #services {
+            background: var(--navy-dark);
+        }
+
+        /* Tab Buttons */
+        .service-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 50px;
+        }
+
+        .stab {
+            padding: 11px 22px;
+            background: transparent;
+            border: 2px solid rgba(255,215,0,0.4);
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .stab:hover,
+        .stab.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        /* Service Panel */
+        .service-panel {
+            display: none;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-panel.active {
+            display: block;
+        }
+
+        /* Service Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--navy);
+            border: 1px solid rgba(255,215,0,0.12);
+            border-radius: 6px;
+            padding: 28px 24px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+            transform-origin: bottom;
+        }
+
+        .service-card:hover {
+            border-color: rgba(255,215,0,0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+        }
+
+        .service-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .service-icon {
+            font-size: 1.8rem;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1rem;
+            color: var(--white);
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .service-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .service-price {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.35rem;
+            color: var(--gold);
+        }
+
+        .book-now-btn {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 7px 16px;
+            border-radius: 3px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .book-now-btn:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        /* Price List Style (for longer lists) */
+        .price-list {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .price-list-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .price-item {
+            background: var(--navy);
+            border: 1px solid rgba(255,215,0,0.1);
+            border-radius: 5px;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .price-item:hover {
+            border-color: var(--gold);
+            background: var(--navy-mid);
+        }
+
+        .price-item-name {
+            color: rgba(255,255,255,0.88);
+            font-size: 0.92rem;
+            font-weight: 400;
+        }
+
+        .price-item-price {
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        /* ================================
+           GALLERY SECTION
+        ================================ */
+        #gallery {
+            background: var(--navy);
+        }
+
+        .gallery-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-hover {
+            position: absolute;
+            inset: 0;
+            background: rgba(10,31,68,0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            gap: 8px;
+        }
+
+        .gallery-item:hover .gallery-hover {
+            opacity: 1;
+        }
+
+        .gallery-hover i {
+            color: var(--gold);
+            font-size: 1.8rem;
+        }
+
+        .gallery-hover span {
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ================================
+           TESTIMONIALS SECTION
+        ================================ */
+        #testimonials {
+            background: var(--navy-dark);
+        }
+
+        .testimonials-grid {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .tcard {
+            background: var(--navy);
+            border: 1px solid rgba(255,215,0,0.13);
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tcard:hover {
+            border-color: rgba(255,215,0,0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.25;
+            line-height: 1;
+            font-family: Georgia, serif;
+            margin-bottom: -10px;
+        }
+
+        .tcard-stars {
+            color: var(--gold);
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+            letter-spacing: 2px;
+        }
+
+        .tcard p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.85;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .tcard-author {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .author-initials {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg, var(--gold), var(--gold-dark)
+            );
+            color: var(--navy-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .author-details h4 {
+            color: var(--white);
+            font-size: 0.95rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .author-details span {
+            color: var(--gold);
+            font-size: 0.78rem;
+        }
+
+        /* ================================
+           BOOKING SECTION
+        ================================ */
+        #booking {
+            background: var(--navy);
+        }
+
+        .booking-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+            background: var(--navy-dark);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 10px;
+            padding: 55px 50px;
+        }
+
+        .booking-wrap h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .booking-sub {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        label {
+            display: block;
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 13px 16px;
+            background: var(--navy);
+            border: 1px solid rgba(255,215,0,0.25);
+            color: var(--white);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+            appearance: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: var(--navy-mid);
+        }
+
+        select option {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        textarea {
+            height: 110px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--gold);
+            color: var(--navy-dark);
+            border: none;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 8px;
+        }
+
+        .submit-btn:hover {
+            background: var(--gold-dark);
+            color: var(--white);
+        }
+
+        .or-whatsapp {
+            text-align: center;
+            margin-top: 22px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .or-whatsapp a {
+            color: #25D366;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* ================================
+           CONTACT SECTION
+        ================================ */
+        #contact {
+            background: var(--navy-dark);
+        }
+
+        .contact-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: start;
+        }
+
+        .contact-left h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .contact-left > p {
+            color: var(--text-muted);
+            line-height: 1.85;
+            margin-bottom: 38px;
+            font-size: 0.97rem;
+        }
+
+        .cinfo-item {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 28px;
+            align-items: flex-start;
+        }
+
+        .cinfo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cinfo-icon i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .cinfo-text h4 {
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .cinfo-text p,
+        .cinfo-text a {
+            color: rgba(255,255,255,0.82);
+            font-size: 0.97rem;
+            line-height: 1.7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .cinfo-text a:hover {
+            color: var(--gold);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .hours-table td:first-child {
+            color: rgba(255,255,255,0.7);
+            padding-right: 20px;
+        }
+
+        .hours-table td:last-child {
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .contact-map {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid rgba(255,215,0,0.25);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 430px;
+            border: none;
+            display: block;
+        }
+
+        .directions-box {
+            background: var(--navy);
+            border: 1px solid rgba(255,215,0,0.2);
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .directions-box h4 {
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .directions-box p {
+            color: var(--text-muted);
+            font-size: 0.87rem;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .directions-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .directions-box i {
+            color: var(--gold);
+            margin-right: 6px;
+        }
+
+        /* ================================
+           FOOTER
+        ================================ */
+        footer {
+            background: #030a17;
+            padding: 65px 20px 25px;
+            border-top: 2px solid rgba(255,215,0,0.2);
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto 45px;
+            display: grid;
+            grid-template-columns: 2.2fr 1fr 1fr 1fr;
+            gap: 45px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.45rem;
+            margin-bottom: 14px;
+            color: var(--white);
+        }
+
+        .footer-brand h3 span {
+            color: var(--gold);
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.85;
+            margin-bottom: 22px;
+        }
+
+        .footer-brand .contact-quick a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-brand .contact-quick a:hover {
+            color: var(--gold);
+        }
+
+        .footer-brand .contact-quick i {
+            color: var(--gold);
+            width: 15px;
+        }
+
+        .social-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-row a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255,215,0,0.35);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .social-row a:hover {
+            background: var(--gold);
+            color: var(--navy-dark);
+            border-color: var(--gold);
+        }
+
+        .footer-col h4 {
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 11px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--gold);
+        }
+
+        .footer-col ul li a i {
+            font-size: 0.7rem;
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 22px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.38);
+            font-size: 0.82rem;
+        }
+
+        .footer-bottom span {
+            color: var(--gold);
+        }
+
+        /* ================================
+           FLOATING BUTTONS
+        ================================ */
+        .floats {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .float-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.35);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.12);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+        }
+
+        .wa-float {
+            background: #25D366;
+            color: #fff;
+        }
+
+        .call-float {
+            background: var(--gold);
+            color: var(--navy-dark);
+        }
+
+        .top-float {
+            background: var(--navy-light);
+            color: var(--gold);
+            border: 1px solid rgba(255,215,0,0.3);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+
+        .top-float.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Pulse animation for WhatsApp */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+            70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        .wa-float {
+            animation: pulse 2s infinite;
+        }
+
+        /* ================================
+           ANIMATIONS
+        ================================ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-up-delay-1 { transition-delay: 0.1s; }
+        .fade-up-delay-2 { transition-delay: 0.2s; }
+        .fade-up-delay-3 { transition-delay: 0.3s; }
+
+        /* ================================
+           MOBILE RESPONSIVE
+        ================================ */
+        @media (max-width: 992px) {
+            #navbar {
+                padding: 18px 25px;
+            }
+
+            #navbar.scrolled {
+                padding: 12px 25px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-wrap {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-badge {
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .price-list-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .contact-wrap {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.9rem;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-wrap {
+                padding: 30px 22px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service-tabs {
+                gap: 6px;
+            }
+
+            .stab {
+                padding: 9px 14px;
+                font-size: 0.7rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ================================
+         ANNOUNCEMENT BAR
+    ================================ -->
+    <div class="announcement-bar">
+        ✨ New Client Special — 10% OFF Your First Visit! &nbsp;|&nbsp;
+        Call Us: <a href="tel:+254762606079">0762606079</a>
+    </div>
+
+    <!-- ================================
+         NAVIGATION
+    ================================ -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">
+            Nadra <span>Barbershop</span> & Spa
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#booking" class="nav-book-btn">
+                    Book Now
+                </a>
+            </li>
+        </ul>
+
+        <div class="hamburger"
+             id="hamburger"
+             onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <span class="close-btn"
+              onclick="toggleMobileNav()">
+            &times;
+        </span>
+        <a href="#about" onclick="toggleMobileNav()">About</a>
+        <a href="#services" onclick="toggleMobileNav()">Services</a>
+        <a href="#gallery" onclick="toggleMobileNav()">Gallery</a>
+        <a href="#testimonials" onclick="toggleMobileNav()">Reviews</a>
+        <a href="#booking" onclick="toggleMobileNav()">Book Now</a>
+        <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+        <a href="tel:+254762606079"
+           style="color: var(--gold);">
+            📞 0762606079
+        </a>
+    </div>
+
+    <!-- ================================
+         HERO SECTION
+    ================================ -->
+    <section id="hero">
+        <!--
+            SAVE YOUR BEST SHOP PHOTO AS: hero.jpg
+            PUT IT IN YOUR images FOLDER
+        -->
+        <img src="images/hero.jpg"
+             alt="Nadra Barbershop and Spa Kasarani Nairobi"
+             class="hero-bg">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">
+                Premium Barbershop & Spa · Kasarani, Nairobi
+            </div>
+
+            <h1>
+                Look Sharp.<br>
+                Feel <span>Refreshed.</span>
+            </h1>
+
+            <p>
+                Nairobi's finest barbershop and spa experience.
+                Professional cuts, expert waxing, luxurious spa
+                treatments and so much more — all under one roof
+                at Vision Plaza, Kasarani.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#booking" class="btn-primary">
+                    📅 Book Appointment
+                </a>
+                <a href="#services" class="btn-secondary">
+                    View Services
+                </a>
+            </div>
+
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Vision Plaza, Kasarani</span>
+                </div>
+                <div class="hero-meta-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0762606079</span>
+                </div>
+                <div class="hero-meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Open Daily</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================
+         STATS BAR
+    ================================ -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item fade-up">
+                <h3>500+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item fade-up fade-up-delay-1">
+                <h3>7+</h3>
+                <p>Service Categories</p>
+            </div>
+            <div class="stat-item fade-up fade-up-delay-2">
+                <h3>5★</h3>
+                <p>Client Rating</p>
+            </div>
+            <div class="stat-item fade-up fade-up-delay-3">
+                <h3>5+</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================
+         ABOUT SECTION
+    ================================ -->
+    <section id="about">
+        <div class="about-wrap">
+
+            <div class="about-img-wrap fade-up">
+                <!--
+                    SAVE YOUR SHOP/TEAM PHOTO AS: about.jpg
+                    PUT IT IN YOUR images FOLDER
+                -->
+                <img src="images/about.jpg"
+                     alt="Nadra Barbershop Interior Kasarani">
+
+                <div class="about-badge">
+                    <span class="big">5+</span>
+                    <span class="small">Years of Excellence</span>
+                </div>
+            </div>
+
+            <div class="about-text fade-up">
+                <span class="section-tag"
+                      style="text-align:left;">
+                    About Us
+                </span>
+
+                <h2>
+                    Kasarani's Premier
+                    <span class="gold">Grooming</span>
+                    & Spa Destination
+                </h2>
+
+                <p>
+                    Welcome to Nadra Barbershop & Spa — your
+                    ultimate destination for premium grooming
+                    and relaxation in Kasarani, Nairobi. We
+                    offer everything from precision haircuts
+                    and beard grooming to luxurious spa
+                    treatments, waxing, facials and massage.
+                </p>
+
+                <p>
+                    Conveniently located at
+                    <strong style="color:var(--gold);">
+                        Kasarani Vision Plaza
+                    </strong>,
+                    near Shell Petrol Station, few meters
+                    from Kasarani Police Station, off Thika
+                    Road near TRM Mall. Easy to find, easy
+                    to love.
+                </p>
+
+                <div class="about-checks">
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Expert Barbers & Stylists</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Premium Products Used</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Clean & Modern Space</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Full Spa & Waxing</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Affordable KES Prices</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Walk-ins Welcome</span>
+                    </div>
+                </div>
+
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <a href="#booking" class="btn-primary">
+                        Book Now
+                    </a>
+                    <a href="tel:+254762606079"
+                       class="btn-secondary"
+                       style="margin-left:0;">
+                        📞 Call Us
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================
+         SERVICES SECTION
+    ================================ -->
+    <section id="services">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Our Services & Prices</h2>
+        <div class="section-line"></div>
+
+        <!-- TAB BUTTONS -->
+        <div class="service-tabs">
+            <button class="stab active"
+                    onclick="switchTab(event,'tab-barbering')">
+                ✂️ Barbering
+            </button>
+            <button class="stab"
+                    onclick="switchTab(event,'tab-coloring')">
+                🎨 Coloring
+            </button>
+            <button class="stab"
+                    onclick="switchTab(event,'tab-waxing')">
+                🪷 Waxing
+            </button>
+            <button class="stab"
+                    onclick="switchTab(event,'tab-facials')">
+                ✨ Scrubbing & Facials
+            </button>
+            <button class="stab"
+                    onclick="switchTab(event,'tab-nails')">
+                💅 Pedicure & Manicure
+            </button>
+            <button class="stab"
+                    onclick="switchTab(event,'tab-spa')">
+                💆 Spa & Massage
+            </button>
+        </div>
+
+        <!-- ===== BARBERING & SHAVING ===== -->
+        <div id="tab-barbering" class="service-panel active">
+            <div class="service-grid">
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">✂️</span>
+                    <h3>Barbering Normal</h3>
+                    <p>Classic precision cut tailored to
+                       your face shape and personal style.
+                       Clean finish every time.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20a%20Barbering%20Normal%20-%20KES%20500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">👦</span>
+                    <h3>Kids Shave</h3>
+                    <p>Gentle and professional haircut
+                       for children. Clean, safe and
+                       fun experience for the little ones.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 300
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20a%20Kids%20Shave%20-%20KES%20300"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-2">
+                    <span class="service-icon">📐</span>
+                    <h3>Hairline</h3>
+                    <p>Sharp, defined hairline shaping
+                       to give your cut a clean and
+                       polished look.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 300
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20a%20Hairline%20-%20KES%20300"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">🧔</span>
+                    <h3>Beards</h3>
+                    <p>Expert beard shaping, trimming
+                       and styling to keep your beard
+                       looking sharp and well-groomed.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 300
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20a%20Beard%20Trim%20-%20KES%20300"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">🪒</span>
+                    <h3>Smooth Shave</h3>
+                    <p>Premium smooth shave experience
+                       for a clean, close and
+                       perfectly smooth finish.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 700
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20a%20Smooth%20Shave%20-%20KES%20700"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-2">
+                    <span class="service-icon">🌿</span>
+                    <h3>Dreadlocks Retouching</h3>
+                    <p>Professional dreadlock maintenance
+                       and retouching to keep your
+                       locs neat and healthy.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 1,500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Dreadlocks%20Retouching%20-%20KES%201500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== COLORING SERVICES ===== -->
+        <div id="tab-coloring" class="service-panel">
+            <div class="price-list">
+                <div class="price-list-grid">
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            🎨 Cream of Nature
+                        </span>
+                        <span class="price-item-price">
+                            KES 2,000
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            🖤 Black Shampoo
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,000
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-2">
+                        <span class="price-item-name">
+                            💜 Bigen
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,500
+                        </span>
+                    </div>
+
+                </div>
+
+                <div style="text-align:center; margin-top:35px;">
+                    <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20inquire%20about%20Coloring%20Services"
+                       class="btn-primary"
+                       target="_blank">
+                        💬 WhatsApp to Book
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== WAXING SERVICES ===== -->
+        <div id="tab-waxing" class="service-panel">
+            <div class="price-list">
+                <div class="price-list-grid">
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            🌿 Brazilian
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,500
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            💫 Underarm
+                        </span>
+                        <span class="price-item-price">
+                            KES 800
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            🦵 Half Leg
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,500
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            🦵 Full Leg
+                        </span>
+                        <span class="price-item-price">
+                            KES 2,000
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            💪 Half Arm
+                        </span>
+                        <span class="price-item-price">
+                            KES 800
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            💪 Full Arm
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,500
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            🫁 Chest
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,500
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            🫃 Stomach
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,500
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            ✨ Stomach / Chest Combo
+                        </span>
+                        <span class="price-item-price">
+                            KES 2,000
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            🌸 Bikini Hairline (Women)
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,000
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            ⭐ Hollywood
+                        </span>
+                        <span class="price-item-price">
+                            KES 4,500
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            👄 Upper Lip
+                        </span>
+                        <span class="price-item-price">
+                            KES 300
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            👄 Lower Lip
+                        </span>
+                        <span class="price-item-price">
+                            KES 300
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up fade-up-delay-1">
+                        <span class="price-item-name">
+                            🌟 Eyebrows
+                        </span>
+                        <span class="price-item-price">
+                            KES 500
+                        </span>
+                    </div>
+
+                    <div class="price-item fade-up">
+                        <span class="price-item-name">
+                            😊 Full Face
+                        </span>
+                        <span class="price-item-price">
+                            KES 1,500
+                        </span>
+                    </div>
+
+                </div>
+
+                <div style="text-align:center; margin-top:35px;">
+                    <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20inquire%20about%20Waxing%20Services"
+                       class="btn-primary"
+                       target="_blank">
+                        💬 WhatsApp to Book
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SCRUBBING & FACIALS ===== -->
+        <div id="tab-facials" class="service-panel">
+            <div class="service-grid">
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">🫧</span>
+                    <h3>Normal Scrubbing</h3>
+                    <p>A refreshing body scrub to remove
+                       dead skin cells and leave your
+                       skin smooth and glowing.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 700
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Normal%20Scrubbing%20-%20KES%20700"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">✨</span>
+                    <h3>Mini Facial / Skin Touch</h3>
+                    <p>A quick skin refresh with no mask
+                       and no steaming. Perfect for a
+                       fast skin pick-me-up.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 1,500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Mini%20Facial%20-%20KES%201500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-2">
+                    <span class="service-icon">💨</span>
+                    <h3>Deep Cleansing with Steaming</h3>
+                    <p>Simple product deep cleansing with
+                       exfoliating and steaming for
+                       clear, healthy skin.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 2,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Deep%20Cleansing%20-%20KES%202000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">🌿</span>
+                    <h3>Basic Facial — Neutrogena</h3>
+                    <p>Full facial with Neutrogena products,
+                       exfoliating mask and steaming for
+                       deep skin rejuvenation.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 3,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Basic%20Facial%20Neutrogena%20-%20KES%203000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== PEDICURES & MANICURES ===== -->
+        <div id="tab-nails" class="service-panel">
+            <div class="service-grid">
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">💅</span>
+                    <h3>Manicure</h3>
+                    <p>Full hand care treatment including
+                       nail shaping, cuticle care and
+                       a beautiful finish.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 800
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20a%20Manicure%20-%20KES%20800"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">💎</span>
+                    <h3>Manigel for Ladies</h3>
+                    <p>Gel manicure for ladies with a
+                       long-lasting glossy finish that
+                       stays chip-free.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 1,200
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Manigel%20-%20KES%201200"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-2">
+                    <span class="service-icon">🦶</span>
+                    <h3>Pedicure</h3>
+                    <p>Complete foot treatment including
+                       soak, scrub, nail care and
+                       moisturizing massage.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 1,500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20a%20Pedicure%20-%20KES%201500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">🌟</span>
+                    <h3>Pedicure Plus Gel Pedi</h3>
+                    <p>Premium pedicure experience combined
+                       with a beautiful long-lasting
+                       gel finish.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 2,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Pedicure%20Plus%20Gel%20-%20KES%202000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">🍯</span>
+                    <h3>Nadra Signature</h3>
+                    <p>Our signature pedi with honey,
+                       cucumber, oranges and foil wrap.
+                       The ultimate luxury treatment!</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 2,800
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20the%20Nadra%20Signature%20-%20KES%202800"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-2">
+                    <span class="service-icon">✂️</span>
+                    <h3>Cut and File</h3>
+                    <p>Quick nail cutting and filing
+                       for a neat, clean look on
+                       both hands or feet.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Cut%20and%20File%20-%20KES%20500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ===== SPA & MASSAGE ===== -->
+        <div id="tab-spa" class="service-panel">
+            <div class="service-grid">
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">🛁</span>
+                    <h3>Body Scrub</h3>
+                    <p>Full body exfoliation treatment to
+                       remove dead skin and leave your
+                       skin soft and radiant.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 3,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Body%20Scrub%20-%20KES%203000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">🤲</span>
+                    <h3>Swedish Massage</h3>
+                    <p>Classic full body massage with long
+                       smooth strokes to relax muscles
+                       and ease tension.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 2,500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Swedish%20Massage%20-%20KES%202500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-2">
+                    <span class="service-icon">💪</span>
+                    <h3>Deep Tissue Massage</h3>
+                    <p>Targets deep muscle layers to
+                       relieve chronic pain, stiffness
+                       and muscle tension.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 3,500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Deep%20Tissue%20Massage%20-%20KES%203500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">🌸</span>
+                    <h3>Aroma Therapy</h3>
+                    <p>Relaxing massage using essential
+                       oils to calm the mind, body
+                       and spirit completely.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 4,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Aroma%20Therapy%20-%20KES%204000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">🪨</span>
+                    <h3>Hot Stone Massage</h3>
+                    <p>Heated stones placed on key points
+                       to deeply relax muscles and
+                       improve circulation.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 5,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Hot%20Stone%20Massage%20-%20KES%205000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-2">
+                    <span class="service-icon">🧠</span>
+                    <h3>Head & Shoulder Massage</h3>
+                    <p>Focused massage on head and
+                       shoulders to relieve stress
+                       and headaches quickly.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 1,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Head%20and%20Shoulder%20Massage%20-%20KES%201000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up">
+                    <span class="service-icon">🔙</span>
+                    <h3>Back Massage</h3>
+                    <p>Targeted back massage to relieve
+                       back pain, tension and stress
+                       from your upper and lower back.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 1,500
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Back%20Massage%20-%20KES%201500"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card fade-up fade-up-delay-1">
+                    <span class="service-icon">🦶</span>
+                    <h3>Reflexology</h3>
+                    <p>Pressure point therapy on the
+                       feet to promote healing,
+                       balance and total relaxation.</p>
+                    <div class="service-bottom">
+                        <span class="service-price">
+                            KES 2,000
+                        </span>
+                        <a href="https://wa.me/254762606079?text=Hi%20Nadra%20Barbershop%2C%20I'd%20like%20to%20book%20Reflexology%20-%20KES%202000"
+                           class="book-now-btn"
+                           target="_blank">
+                            Book Now
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ================================
+         GALLERY SECTION
+    ================================ -->
+    <section id="gallery">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">Photo Gallery</h2>
+        <div class="section-line"></div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item fade-up">
+                <!--
+                    SAVE PHOTOS AS: gallery1.jpg to gallery6.jpg
+                    PUT THEM IN YOUR images FOLDER
+                -->
+                <img src="images/gallery1.jpg"
+                     alt="Haircut at Nadra Barbershop Kasarani">
+                <div class="gallery-hover">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View</span>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-up fade-up-delay-1">
+                <img src="images/gallery2.jpg"
+                     alt="Beard Grooming Nadra Barbershop">
+                <div class="gallery-hover">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View</span>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-up fade-up-delay-2">
+                <img src="images/gallery3.jpg"
+                     alt="Spa Treatment Nadra Kasarani">
+                <div class="gallery-hover">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View</span>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-up">
+                <img src="images/gallery4.jpg"
+                     alt="Waxing Service Nadra Barbershop">
+                <div class="gallery-hover">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View</span>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-up fade-up-delay-1">
+                <img src="images/gallery5.jpg"
+                     alt="Pedicure Manicure Nadra Spa">
+                <div class="gallery-hover">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View</span>
+                </div>
+            </div>
+
+            <div class="gallery-item fade-up fade-up-delay-2">
+                <img src="images/gallery6.jpg"
+                     alt="Massage Nadra Spa Kasarani">
+                <div class="gallery-hover">
+                    <i class="fas fa-search-plus"></i>
+                    <span>View</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================
+         TESTIMONIALS SECTION
+    ================================ -->
+    <section id="testimonials">
+        <span class="section-tag">Client Reviews</span>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="section-line"></div>
+
+        <div class="testimonials-grid">
+
+            <div class="tcard fade-up">
+                <div class="quote-icon">"</div>
+                <div class="tcard-stars">★★★★★</div>
+                <p>
+                    "Best barbershop in Kasarani! Clean,
+                    professional and very affordable. My fade
+                    was on point and the staff are super
+                    friendly. Found them near Shell Petrol
+                    Station — very easy to locate!"
+                </p>
+                <div class="tcard-author">
+                    <div class="author-initials">JM</div>
+                    <div class="author-details">
+                        <h4>James M.</h4>
+                        <span>Kasarani Client ✓</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tcard fade-up fade-up-delay-1">
+                <div class="quote-icon">"</div>
+                <div class="tcard-stars">★★★★★</div>
+                <p>
+                    "The Nadra Signature pedicure is
+                    absolutely amazing! Honey, cucumber and
+                    oranges — I felt like royalty. The spa
+                    area is clean and relaxing. Highly
+                    recommended to all ladies in Nairobi!"
+                </p>
+                <div class="tcard-author">
+                    <div class="author-initials">SW</div>
+                    <div class="author-details">
+                        <h4>Sarah W.</h4>
+                        <span>TRM Area Client ✓</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tcard fade-up fade-up-delay-2">
+                <div class="quote-icon">"</div>
+                <div class="tcard-stars">★★★★★</div>
+                <p>
+                    "I got the hot stone massage and it was
+                    the best decision ever! Completely
+                    relaxed after a stressful week. Nadra
+                    Barbershop & Spa at Vision Plaza is
+                    a hidden gem off Thika Road!"
+                </p>
+                <div class="tcard-author">
+                    <div class="author-initials">BO</div>
+                    <div class="author-details">
+                        <h4>Brian O.</h4>
+                        <span>Thika Road Client ✓</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================
+         BOOKING SECTION
+    ================================ -->
+    <section id="booking">
+        <span class="section-tag">Appointments</span>
+        <h2 class="section-title">Book Your Visit</h2>
+        <div class="section-line"></div>
+
+        <div class="booking-wrap">
+            <h2>
+                Book an
+                <span class="gold">Appointment</span>
+            </h2>
+            <p class="booking-sub">
+                Fill in the form below — your booking details
+                will be sent directly to us via WhatsApp!
+            </p>
+
+            <form onsubmit="sendToWhatsApp(event)">
+
+                <div class="form-group">
+                    <label for="fname">Your Full Name</label>
+                    <input type="text"
+                           id="fname"
+                           placeholder="Enter your full name"
+                           required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fphone">Phone Number</label>
+                        <input type="tel"
+                               id="fphone"
+                               placeholder="07XXXXXXXX"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fservice">Select Service</label>
+                        <select id="fservice" required>
+                            <option value="">
+                                Choose a service...
+                            </option>
+                            <optgroup label="✂️ Barbering & Shaving">
+                                <option>Barbering Normal — KES 500</option>
+                                <option>Kids Shave — KES 300</option>
+                                <option>Hairline — KES 300</option>
+                                <option>Beards — KES 300</option>
+                                <option>Smooth Shave — KES 700</option>
+                                <option>Dreadlocks Retouching — KES 1,500</option>
+                            </optgroup>
+                            <optgroup label="🎨 Coloring">
+                                <option>Cream of Nature — KES 2,000</option>
+                                <option>Black Shampoo — KES 1,000</option>
+                                <option>Bigen — KES 1,500</option>
+                            </optgroup>
+                            <optgroup label="🪷 Waxing">
+                                <option>Brazilian — KES 1,500</option>
+                                <option>Underarm — KES 800</option>
+                                <option>Half Leg — KES 1,500</option>
+                                <option>Full Leg — KES 2,000</option>
+                                <option>Half Arm — KES 800</option>
+                                <option>Full Arm — KES 1,500</option>
+                                <option>Chest — KES 1,500</option>
+                                <option>Stomach — KES 1,500</option>
+                                <option>Stomach/Chest — KES 2,000</option>
+                                <option>Bikini Hairline — KES 1,000</option>
+                                <option>Hollywood — KES 4,500</option>
+                                <option>Upper Lip — KES 300</option>
+                                <option>Lower Lip — KES 300</option>
+                                <option>Eyebrows — KES 500</option>
+                                <option>Full Face — KES 1,500</option>
+                            </optgroup>
+                            <optgroup label="✨ Scrubbing & Facials">
+                                <option>Normal Scrubbing — KES 700</option>
+                                <option>Mini Facial — KES 1,500</option>
+                                <option>Deep Cleansing + Steaming — KES 2,000</option>
+                                <option>Basic Facial Neutrogena — KES 3,000</option>
+                            </optgroup>
+                            <optgroup label="💅 Pedicure & Manicure">
+                                <option>Manicure — KES 800</option>
+                                <option>Manigel for Ladies — KES 1,200</option>
+                                <option>Pedicure — KES 1,500</option>
+                                <option>Pedicure Plus Gel — KES 2,000</option>
+                                <option>Nadra Signature — KES 2,800</option>
+                                <option>Cut and File — KES 500</option>
+                            </optgroup>
+                            <optgroup label="💆 Spa & Massage">
+                                <option>Body Scrub — KES 3,000</option>
+                                <option>Swedish Massage — KES 2,500</option>
+                                <option>Deep Tissue Massage — KES 3,500</option>
+                                <option>Aroma Therapy — KES 4,000</option>
+                                <option>Hot Stone Massage — KES 5,000</option>
+                                <option>Head & Shoulder Massage — KES 1,000</option>
+                                <option>Back Massage — KES 1,500</option>
+                                <option>Reflexology — KES 2,000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fdate">Preferred Date</label>
+                        <input type="date"
+                               id="fdate"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ftime">Preferred Time</label>
+                        <select id="ftime" required>
+                            <option value="">Select time...</option>
+                            <option>8:00 AM</option>
+                            <option>9:00 AM</option>
+                            <option>10:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>12:00 PM</option>
+                            <option>1:00 PM</option>
+                            <option>2:00 PM</option>
+                            <option>3:00 PM</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fnotes">
+                        Special Requests (Optional)
+                    </label>
+                    <textarea
+                        id="fnotes"
+                        placeholder="Any special notes or requests...">
+                    </textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    📲 Confirm via WhatsApp
+                </button>
+
+            </form>
+
+            <p class="or-whatsapp">
+                Or message us directly on
+                <a href="https://wa.me/254762606079?text=Hello%20Nadra%20Barbershop%2C%20I%20would%20like%20to%20book%20an%20appointment"
+                   target="_blank">
+                    💚 WhatsApp: 0762606079
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ================================
+         CONTACT SECTION
+    ================================ -->
+    <section id="contact">
+        <span class="section-tag">Find Us</span>
+        <h2 class="section-title">Contact & Location</h2>
+        <div class="section-line"></div>
+
+        <div class="contact-wrap">
+
+            <div class="contact-left fade-up">
+                <h2>
+                    Visit Us at
+                    <span class="gold">Vision Plaza</span>
+                </h2>
+                <p>
+                    We are conveniently located at Kasarani
+                    Vision Plaza, Nairobi. Easily accessible
+                    from Thika Road, TRM Mall, Kasarani Stage
+                    and all parts of Nairobi. Walk-ins welcome!
+                </p>
+
+                <div class="cinfo-item">
+                    <div class="cinfo-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="cinfo-text">
+                        <h4>Our Address</h4>
+                        <p>
+                            Kasarani Vision Plaza<br>
+                            Near Shell Petrol Station<br>
+                            Few Meters from Kasarani Police Station<br>
+                            Off Thika Road, Near TRM Mall<br>
+                            Kasarani, Nairobi, Kenya
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cinfo-item">
+                    <div class="cinfo-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="cinfo-text">
+                        <h4>Call or WhatsApp</h4>
+                        <a href="tel:+254762606079">
+                            0762606079
+                        </a><br>
+                        <a href="https://wa.me/254762606079"
+                           target="_blank"
+                           style="color:#25D366;">
+                            💚 Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cinfo-item">
+                    <div class="cinfo-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="cinfo-text">
+                        <h4>Business Hours</h4>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday – Saturday</td>
+                                <td>8:00 AM – 8:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>9:00 AM – 6:00 PM</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="directions-box">
+                    <h4>
+                        <i class="fas fa-directions"></i>
+                        How to Find Us
+                    </h4>
+                    <p>
+                        <i class="fas fa-circle"
+                           style="font-size:0.5rem;">
+                        </i>
+                        <strong>From TRM Mall:</strong>
+                        Head towards Kasarani along Thika Road,
+                        turn into Vision Plaza near Shell
+                        Petrol Station.
+                    </p>
+                    <p>
+                        <i class="fas fa-circle"
+                           style="font-size:0.5rem;">
+                        </i>
+                        <strong>From CBD Nairobi:</strong>
+                        Take Thika Road, exit at Kasarani,
+                        Vision Plaza is near Shell Petrol
+                        Station on your right.
+                    </p>
+                    <p>
+                        <i class="fas fa-circle"
+                           style="font-size:0.5rem;">
+                        </i>
+                        <strong>Near Kasarani Police:</strong>
+                        We are just a few meters from
+                        Kasarani Police Station inside
+                        Vision Plaza.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fade-up fade-up-delay-1">
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.819533495053!2d36.89844!3d-1.2273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f9bad3c0001%3A0x0!2sKasarani%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000"
+                        allowfullscreen=""
+                        loading="lazy"
+                        title="Nadra Barbershop Location - Kasarani Vision Plaza">
+                    </iframe>
+                </div>
+
+                <div style="margin-top:20px;
+                            display:flex;
+                            gap:12px;
+                            flex-wrap:wrap;">
+                    <a href="tel:+254762606079"
+                       class="btn-primary"
+                       style="flex:1; text-align:center;">
+                        📞 Call Now
+                    </a>
+                    <a href="https://wa.me/254762606079?text=Hello%20Nadra%20Barbershop%2C%20I%20would%20like%20to%20book%20an%20appointment"
+                       class="btn-secondary"
+                       style="flex:1;
+                              text-align:center;
+                              margin-left:0;
+                              border-color:#25D366;
+                              color:#25D366;"
+                       target="_blank">
+                        💚 WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================
+         FOOTER
+    ================================ -->
+    <footer>
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h3>
+                    Nadra
+                    <span>Barbershop</span>
+                    & Spa
+                </h3>
+                <p>
+                    Your premier grooming and spa destination
+                    in Kasarani, Nairobi. We offer barbering,
+                    waxing, facials, massage and more — all
+                    at Vision Plaza off Thika Road.
+                </p>
+                <div class="contact-quick">
+                    <a href="tel:+254762606079">
+                        <i class="fas fa-phone"></i>
+                        0762606079
+                    </a>
+                    <a href="https://wa.me/254762606079"
+                       target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
+                    <a href="#contact">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Vision Plaza, Kasarani, Nairobi
+                    </a>
+                </div>
+                <div class="social-row">
+                    <a href="#" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/254762606079"
+                       target="_blank"
+                       title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>
+                        <a href="#about">
+                            <i class="fas fa-chevron-right"></i>
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-chevron-right"></i>
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#gallery">
+                            <i class="fas fa-chevron-right"></i>
+                            Gallery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#testimonials">
+                            <i class="fas fa-chevron-right"></i>
+                            Reviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#booking">
+                            <i class="fas fa-chevron-right"></i>
+                            Book Now
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <i class="fas fa-chevron-right"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-chevron-right"></i>
+                            Barbering & Shaving
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-chevron-right"></i>
+                            Waxing Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-chevron-right"></i>
+                            Scrubbing & Facials
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-chevron-right"></i>
+                            Pedicure & Manicure
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-chevron-right"></i>
+                            Spa & Massage
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="fas fa-chevron-right"></i>
+                            Hair Coloring
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>
+                        <a href="#contact"
+                           style="flex-direction:column;
+                                  align-items:flex-start;">
+                            <span style="color:rgba(255,255,255,0.7)">
+                                Mon – Sat
+                            </span>
+                            <span class="gold"
+                                  style="font-weight:700;">
+                                8:00 AM – 8:00 PM
+                            </span>
+                        </a>
+                    </li>
+                    <li style="margin-top:8px;">
+                        <a href="#contact"
+                           style="flex-direction:column;
+                                  align-items:flex-start;">
+                            <span style="color:rgba(255,255,255,0.7)">
+                                Sunday
+                            </span>
+                            <span class="gold"
+                                  style="font-weight:700;">
+                                9:00 AM – 6:00 PM
+                            </span>
+                        </a>
+                    </li>
+                    <li style="margin-top:20px;">
+                        <a href="tel:+254762606079"
+                           style="color:var(--gold);
+                                  font-weight:700;
+                                  font-family:'Montserrat',sans-serif;">
+                            📞 0762606079
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2024
+                <span>Nadra Barbershop & Spa</span>.
+                All Rights Reserved.
+            </p>
+            <p>
+                Proudly serving
+                <span>Kasarani · TRM · Roysambu · Nairobi</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ================================
+         FLOATING BUTTONS
+    ================================ -->
+    <div class="floats">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/254762606079?text=Hello%20Nadra%20Barbershop%2C%20I%20would%20like%20to%20book%20an%20appointment"
+           class="float-btn wa-float"
+           target="_blank"
+           title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Call -->
+        <a href="tel:+254762606079"
+           class="float-btn call-float"
+           title="Call Us Now">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Back to Top -->
+        <a href="#hero"
+           class="float-btn top-float"
+           id="backToTop"
+           title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================ -->
+    <script>
+
+        // ----- Navbar Scroll Effect -----
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('navbar');
+            const topBtn = document.getElementById('backToTop');
+
+            if (window.scrollY > 60) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 350) {
+                topBtn.classList.add('show');
+            } else {
+                topBtn.classList.remove('show');
+            }
+        });
+
+        // ----- Mobile Nav Toggle -----
+        function toggleMobileNav() {
+            const nav = document.getElementById('mobileNav');
+            const ham = document.getElementById('hamburger');
+            nav.classList.toggle('open');
+            ham.classList.toggle('active');
+            document.body.style.overflow =
+                nav.classList.contains('open') ? 'hidden' : '';
+        }
+
+        // ----- Services Tab Switcher -----
+        function switchTab(event, panelId) {
+            // Hide all panels
+            document.querySelectorAll('.service-panel')
+                .forEach(p => p.classList.remove('active'));
+
+            // Remove active from all tab buttons
+            document.querySelectorAll('.stab')
+                .forEach(b => b.classList.remove('active'));
+
+            // Show selected panel
+            document.getElementById(panelId)
+                .classList.add('active');
+
+            // Set clicked button as active
+            event.target.classList.add('active');
+
+            // Re-trigger animations
+            document.querySelectorAll(
+                '#' + panelId + ' .fade-up'
+            ).forEach(el => {
+                el.classList.remove('visible');
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 50);
+            });
+        }
+
+        // ----- Booking Form → WhatsApp -----
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+
+            const name =
+                document.getElementById('fname').value;
+            const phone =
+                document.getElementById('fphone').value;
+            const service =
+                document.getElementById('fservice').value;
+            const date =
+                document.getElementById('fdate').value;
+            const time =
+                document.getElementById('ftime').value;
+            const notes =
+                document.getElementById('fnotes').value;
+
+            const msg =
+                `Hello Nadra Barbershop & Spa! 👋%0A%0A` +
+                `I'd like to book an appointment:%0A%0A` +
+                `👤 *Name:* ${name}%0A` +
+                `📞 *Phone:* ${phone}%0A` +
+                `✂️ *Service:* ${service}%0A` +
+                `📅 *Date:* ${date}%0A` +
+                `⏰ *Time:* ${time}%0A` +
+                `📝 *Notes:* ${notes || 'None'}%0A%0A` +
+                `📍 Vision Plaza, Kasarani, Nairobi`;
+
+            window.open(
+                'https://wa.me/254762606079?text=' + msg,
+                '_blank'
+            );
+        }
+
+        // ----- Scroll Animations -----
+        const scrollObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            },
+            { threshold: 0.12 }
+        );
+
+        document.querySelectorAll('.fade-up').forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // ----- Set minimum date to today -----
+        const dateInput = document.getElementById('fdate');
+        if (dateInput) {
+            const today = new Date()
+                .toISOString()
+                .split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+    </script>
+
+</body>
+</html>
