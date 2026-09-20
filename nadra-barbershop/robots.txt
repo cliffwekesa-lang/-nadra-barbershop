@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nadrabarbershop.co.ke/sitemap.xml
