@@ -271,6 +271,8 @@ h3{font-size:1.2rem}
 /* cta band */
 .band{position:relative;overflow:hidden;isolation:isolate;padding:clamp(52px,9vw,88px) 0}
 .band>svg{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,28,52,.95) 32%,rgba(10,28,52,.25))}
+@media(max-width:700px){.band::after{background:rgba(10,28,52,.82)}}
 .band h2{max-width:26rem;font-size:clamp(1.9rem,7vw,3rem)}
 .band p{margin-top:12px;max-width:30rem;color:var(--on-dark-2)}
 .band .btn-row{margin-top:26px}
